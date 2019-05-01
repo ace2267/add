@@ -13,10 +13,11 @@ docs = es_client.search(index = 'nwsession-fin-*', body = {'query': {'range': {'
 
 from pandasticsearch import Select
 pandas_df = Select.from_dict(docs).to_pandas()
+pandas_df.dtypes
 print(pandas_df.describe())
 
 
-pandas_df.dtypes
+
 
 # print(pandas_df.head(2))
 
